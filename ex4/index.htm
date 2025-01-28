@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.completed {
+        text-decoration: line-through;
+        color: gray;
+    }</style>
+    
+    
+</head>
+<body>
+    <div>
+        <input type="text" id="title" placeholder="Add a Title">
+        <input type="text" id="author" placeholder="Add author">
+
+        <input type="text" id="ISBN" placeholder="Add a ISBN">
+
+        <button id="addTask">Add BOOK</button>
+        <div id="listBook">
+            <table id="table" class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">ISBN</th>
+                  </tr>
+                </thead>
+             
+              </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

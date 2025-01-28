@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #movieList {
+            margin-top: 20px;
+        }
+        .movie {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Manager</h1>
+    <input type="text" id="movieInput" placeholder="Enter movie name" />
+    <button id="addMovie">Add Movie</button>
+    <button id="searchMovie">Search</button>
+    <button id="resetMovies">Reset</button>
+
+    <h2>My Movies</h2>
+    <div id="movieList"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

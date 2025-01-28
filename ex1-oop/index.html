@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: calc(100% - 24px);
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .reset {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .total {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Water Tracker</h1>
+        <input type="number" id="waterInput" placeholder="Enter water in ml">
+        <button class="add" id="addWater">Add Water</button>
+        <button class="reset" id="resetWater">Reset</button>
+        <div class="total">
+            Total Water: <span id="totalWater">0</span> ml
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
