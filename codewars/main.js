@@ -103,15 +103,26 @@ let result = str.toJadenCase();
 console.log(result); 
 
 // ex 6
-function solve(arr,reslt){
- for (let i = 0; i < arr.length; i++) {
-    let num = arr[i];
-    // إذا كان العدد المقابل (السالب أو الموجب) موجودًا في المصفوفة
-    if (arr.includes(-num)) {
-      return num;  // يوجد عدد ومقابله
+
+function solve(arr,foundMatch) {
+
+  for (let i = 0; i < arr.length; i++) {
+     foundMatch = false;  
+
+    for (let j = 0 ; j < arr.length; j++) {
+        if (i!= j && arr[i] === -(arr[j])) { 
+           foundMatch= true;
+           break          
+        }
     }
-  }
-  return num;
-};
-console.log(solve([1, -1, 2, -2, 3]))
-console.log(solve([-3, 1, 2, 3, -1, -4, -2]))
+    if (!foundMatch ){
+      return arr[i];
+    } 
+}
+return null; 
+
+}
+
+console.log(solve([1,-1,2,-2,3,3]))
+console.log(solve([-3, 1, 2,3 , -1, -4, -2]))
+
