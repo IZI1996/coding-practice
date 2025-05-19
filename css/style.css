@@ -1,0 +1,29 @@
+.parent {
+    background-color: blue;
+    padding:10px;
+    display:flex ;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    height: 400px;
+    /* what  means stretch */
+    
+}
+.parent div{
+    padding:10px;
+    margin:10px;
+ 
+}
+#itemA{
+    background-color: green;
+    width: 20%;    
+}
+.itemB{
+    background-color: red;
+    width: 40%;
+}
+.itemC{
+    background-color: orange;
+}
+.itemD{
+    background-color: wheat;
+}

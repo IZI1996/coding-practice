@@ -125,4 +125,54 @@ return null;
 
 console.log(solve([1,-1,2,-2,3,3]))
 console.log(solve([-3, 1, 2,3 , -1, -4, -2]))
+// ex 7
+function uniqueInOrder(text) {
+  let result = [];
 
+  // Step 1: Loop through the string and collect unique consecutive characters
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] !== text[i - 1]) {  // Only add the character if it is different from the previous one
+      result.push(text[i]);
+    }
+  }
+
+  console.log("Unique Consecutive Characters: ", result);  // Check the intermediate result
+
+  // Step 2: Count occurrences of each character
+  const counts = {};
+  result.forEach((char) => {
+    counts[char] = (counts[char] || 0) + 1;
+  });
+
+
+  // Step 3: Filter characters with counts greater than 2
+  const filter = Object.keys(counts).filter((char) => counts[char] > 2);
+
+}
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));  // Expected Output: ['A', 'B']
+console.log(uniqueInOrder('1,2,2,3,3')); 
+
+
+//8
+
+
+
+function allNines(x,m=1) {
+  while (true) {
+    let dd = x * m;
+
+    // الشرط الصحيح بدون "x < 4000" ولا "n"
+    if (/^9+$/.test(dd.toString())) {
+      return m;
+    }
+
+    if (m > 10000) {
+      return -1;
+    }
+
+    m++;
+  }
+}
+
+console.log(allNines(13)); // يجب أن يرجع 9 لأن 11 * 9 = 99
